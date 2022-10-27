@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:smart_farming/core/bindings/onboarding_binding.dart';
 import 'package:smart_farming/ui/pages/home/home_page.dart';
 import 'package:smart_farming/ui/pages/onboarding/onboarding_page.dart';
 
@@ -11,6 +12,10 @@ class AppRouter {
 
   static List<GetPage> routes = [
     GetPage(name: home, page: () => const HomePage()),
-    GetPage(name: onboarding, page: () => const OnboardingPage()),
+    GetPage(
+      name: onboarding,
+      page: () => const OnboardingPage(),
+      binding: OnboardingBinding(),
+    ),
   ];
 }

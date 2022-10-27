@@ -39,6 +39,7 @@ dependencies:
   flutter_onboard: ^2.0.0
   lottie: ^1.4.2
   animations: ^2.0.7
+  dots_indicator: ^2.1.0
 
 dev_dependencies:
   flutter_test:
