@@ -13,15 +13,12 @@ class MainPage extends GetView<MainController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(() => IndexedStack(
-            index: controller.currentIndex.value,
-            children: const [
-              HomePage(),
-              HomePage(),
-              HomePage(),
-              AccountPage(),
-            ],
-          )),
+      body: Obx(
+        () => IndexedStack(
+          index: controller.currentIndex.value,
+          children: const [HomePage(), HomePage(), HomePage(), AccountPage()],
+        ),
+      ),
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(
             currentIndex: controller.currentIndex.value,

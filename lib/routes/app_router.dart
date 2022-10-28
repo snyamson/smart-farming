@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
+import 'package:smart_farming/core/bindings/main_binding.dart';
 import 'package:smart_farming/core/bindings/onboarding_binding.dart';
 import 'package:smart_farming/core/bindings/splash_binding.dart';
 import 'package:smart_farming/ui/pages/home/home_page.dart';
+import 'package:smart_farming/ui/pages/main/main_page.dart';
 import 'package:smart_farming/ui/pages/onboarding/onboarding_page.dart';
 import 'package:smart_farming/ui/pages/splash/splash_page.dart';
 
@@ -27,6 +29,11 @@ class AppRouter {
       name: splash,
       page: () => const SplashPage(),
       binding: SplashBinding(),
+    ),
+    GetPage(
+      name: main,
+      page: () => const MainPage(),
+      binding: MainBinding(),
     ),
   ];
 }
