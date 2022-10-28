@@ -39,6 +39,7 @@ class Dimensions {
   static double font20 = screenHeight / 42.286;
   static double font24 = screenHeight / 35.238;
   static double font26 = screenHeight / 32.527;
+  static double font51 = screenHeight / 16.583;
 
   // Dynamic Sizes for BorderRadius
   static double radius5 = screenHeight / 169.142;

@@ -4,6 +4,11 @@ import 'package:smart_farming/theme/app_colors.dart';
 import 'package:smart_farming/utils/constants/dimensions.dart';
 
 class AppTypography {
+  static TextStyle splashText = GoogleFonts.poppins(
+    fontSize: Dimensions.font51,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
   static TextStyle textBold26 = GoogleFonts.poppins(
     fontSize: Dimensions.font26,
     fontWeight: FontWeight.bold,
