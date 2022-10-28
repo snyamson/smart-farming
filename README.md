@@ -1,16 +1,9 @@
-# smart_farming
+# Smart Farming | Overview
 
-A new Flutter project.
+Smart Farming is an app concept by Revolution Creation Team. The App runs three (3) modules:
 
-## Getting Started
+- **Market:** The app displays farm products directly from the farm and sells them online with a delivery option. This help farmers indirectly reach larger audience making much from their produce.
 
-This project is a starting point for a Flutter application.
+- **Information:** The app displays in real time the of the various products to help the farmers cultivate the needed products by the market. Registered farmers receives periodic information to help them make informed decision on the best time to cultivate etc. Also, there are a couple of lessons on ways to solve post-harvest losses that registered farmers have access to and read.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Farm Logistics:** This assist farmers to locate tractors and other farm equipment’s to their farms during production seasons. Also farm inputs can be requested through this page.
