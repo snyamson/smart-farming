@@ -69,7 +69,7 @@ class OnboardingPage extends GetView<OnboardingController> {
           top: Dimensions.screenHeight / 9.834,
           child: GestureDetector(
             onTap: () {
-              Get.offNamedUntil(AppRouter.getHomeRoute, (route) => false);
+              Get.offNamedUntil(AppRouter.getMainRoute, (route) => false);
             },
             child: Text(
               'Skip',

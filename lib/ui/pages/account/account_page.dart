@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:smart_farming/theme/app_colors.dart';
 import 'package:smart_farming/theme/typography.dart';
+import 'package:smart_farming/ui/shared/widgets/account_tile.dart';
 import 'package:smart_farming/utils/constants/dimensions.dart';
 
 class AccountPage extends StatelessWidget {
@@ -53,39 +54,54 @@ class AccountPage extends StatelessWidget {
           Expanded(
               child: ListView(
             physics: const BouncingScrollPhysics(),
-            children: const [
-              ListTile(
-                leading: Icon(FeatherIcons.alignJustify),
-                title: Text('My Orders'),
+            children: [
+              AccountTile(
+                label: 'My Orders',
+                icon: FeatherIcons.shoppingBag,
+                onTap: () {},
               ),
-              ListTile(
-                leading: Icon(FeatherIcons.alignJustify),
-                title: Text('Favorites'),
+              const Divider(color: Color(0xFFD1D1D1)),
+              AccountTile(
+                label: 'Favorites',
+                icon: FeatherIcons.heart,
+                onTap: () {},
               ),
-              ListTile(
-                leading: Icon(FeatherIcons.alignJustify),
-                title: Text('Settings'),
+              const Divider(color: Color(0xFFD1D1D1)),
+              AccountTile(
+                label: 'Settings',
+                icon: FeatherIcons.settings,
+                onTap: () {},
               ),
-              ListTile(
-                leading: Icon(FeatherIcons.alignJustify),
-                title: Text('My Cart'),
+              const Divider(color: Color(0xFFD1D1D1)),
+              AccountTile(
+                label: 'My Cart',
+                icon: FeatherIcons.shoppingCart,
+                onTap: () {},
               ),
-              ListTile(
-                leading: Icon(FeatherIcons.alignJustify),
-                title: Text('Rate us'),
+              const Divider(color: Color(0xFFD1D1D1)),
+              AccountTile(
+                label: 'Rate us',
+                icon: FeatherIcons.star,
+                onTap: () {},
               ),
-              ListTile(
-                leading: Icon(FeatherIcons.alignJustify),
-                title: Text('Refer a friend'),
+              const Divider(color: Color(0xFFD1D1D1)),
+              AccountTile(
+                label: 'Refer a friend',
+                icon: FeatherIcons.share2,
+                onTap: () {},
               ),
-              ListTile(
-                leading: Icon(FeatherIcons.alignJustify),
-                title: Text('Help'),
+              const Divider(color: Color(0xFFD1D1D1)),
+              AccountTile(
+                label: 'Help',
+                icon: FeatherIcons.helpCircle,
+                onTap: () {},
               ),
-              ListTile(
-                leading: Icon(FeatherIcons.alignJustify),
-                title: Text('Log Out'),
-              )
+              const Divider(color: Color(0xFFD1D1D1)),
+              AccountTile(
+                label: 'Log Out',
+                icon: FeatherIcons.logOut,
+                onTap: () {},
+              ),
             ],
           ))
         ],

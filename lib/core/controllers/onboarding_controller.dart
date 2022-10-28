@@ -11,7 +11,7 @@ class OnboardingController extends GetxController {
 
   void move() {
     if (isLastPage) {
-      Get.offNamedUntil(AppRouter.getHomeRoute, (route) => false);
+      Get.offNamedUntil(AppRouter.getMainRoute, (route) => false);
     } else {
       pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);
     }
