@@ -9,6 +9,7 @@ class AppTypography {
     fontWeight: FontWeight.bold,
     color: Colors.white,
   );
+
   static TextStyle textBold26 = GoogleFonts.poppins(
     fontSize: Dimensions.font26,
     fontWeight: FontWeight.bold,
@@ -22,6 +23,11 @@ class AppTypography {
 
   static TextStyle textStyle18 = GoogleFonts.poppins(
     fontSize: Dimensions.font18,
+  );
+
+  static TextStyle textBold16 = GoogleFonts.poppins(
+    fontSize: Dimensions.font16,
+    fontWeight: FontWeight.bold,
   );
 
   static TextStyle textSemiBold16 = GoogleFonts.poppins(
@@ -50,7 +56,7 @@ class AppTypography {
     fontWeight: FontWeight.w400,
   );
 
-  static TextStyle textStyle12 = GoogleFonts.poppins(
+  static TextStyle textRegular12 = GoogleFonts.poppins(
     fontSize: Dimensions.font12,
   );
 
@@ -61,5 +67,10 @@ class AppTypography {
 
   static TextStyle textRegular10 = GoogleFonts.poppins(
     fontSize: Dimensions.font10,
+  );
+
+  static TextStyle textMedium10 = GoogleFonts.poppins(
+    fontSize: Dimensions.font10,
+    fontWeight: FontWeight.w600,
   );
 }
