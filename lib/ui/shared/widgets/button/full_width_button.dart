@@ -19,7 +19,7 @@ class FullWidthButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(Dimensions.radius10),
         ),
-        minimumSize: Size.fromHeight(Dimensions.height52),
+        minimumSize: Size.fromHeight(Dimensions.height50),
       ),
       child: Text(
         label,

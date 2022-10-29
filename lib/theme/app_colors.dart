@@ -11,4 +11,5 @@ class AppColors {
   static Color onboardingTitleTextColor = const Color(0xFF2F2E41);
   static Color onboardingDescTextColor = const Color(0xFF78787C);
   static Color dividerColor = const Color(0xFFD1D1D1);
+  static Color loaderScreenTextColor = const Color(0xFF0C0B0B);
 }

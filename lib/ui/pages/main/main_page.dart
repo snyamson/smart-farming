@@ -6,6 +6,8 @@ import 'package:smart_farming/theme/app_colors.dart';
 import 'package:smart_farming/theme/typography.dart';
 import 'package:smart_farming/ui/pages/account/account_page.dart';
 import 'package:smart_farming/ui/pages/home/home_page.dart';
+import 'package:smart_farming/ui/shared/pages/loading/done_loading_page.dart';
+import 'package:smart_farming/ui/shared/pages/loading/loading_page.dart';
 
 class MainPage extends GetView<MainController> {
   const MainPage({Key? key}) : super(key: key);
@@ -16,7 +18,12 @@ class MainPage extends GetView<MainController> {
       body: Obx(
         () => IndexedStack(
           index: controller.currentIndex.value,
-          children: const [HomePage(), HomePage(), HomePage(), AccountPage()],
+          children: const [
+            LoadingPage(),
+            DoneLoadingPage(),
+            HomePage(),
+            AccountPage()
+          ],
         ),
       ),
       bottomNavigationBar: Obx(

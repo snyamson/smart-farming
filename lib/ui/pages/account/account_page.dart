@@ -24,7 +24,7 @@ class AccountPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Spacer(),
-                    CircleAvatar(radius: Dimensions.height52 - 2),
+                    CircleAvatar(radius: Dimensions.height50),
                     SizedBox(height: Dimensions.height10),
                     Text(
                       'Solomon Nyamson',
