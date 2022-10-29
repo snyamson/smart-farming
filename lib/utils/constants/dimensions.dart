@@ -10,6 +10,7 @@ class Dimensions {
   static double productTileContainerWidth = screenHeight / 7.167;
   static double productImageContainerHeight = screenHeight / 4.805;
   static double productImageContainerWidth = screenHeight / 2.525;
+  static double accountPageHeaderHeight = screenHeight / 3.382;
 
   //Buttons
   static double smallButtonHeight = screenHeight / 21.143;
@@ -18,6 +19,7 @@ class Dimensions {
   static double onBoardingButtonWidth = screenHeight / 5.793;
 
   // Dynamic Sizes for Padding and Margin
+  static double height6 = screenHeight / 140.951;
   static double height10 = screenHeight / 84.571;
   static double height15 = screenHeight / 56.380;
   static double height40 = screenHeight / 21.143;
@@ -49,5 +51,6 @@ class Dimensions {
   static double iconSize12 = screenHeight / 70.476;
   static double iconSize16 = screenHeight / 52.857;
   static double iconSize18 = screenHeight / 46.984;
+  static double iconSize20 = screenHeight / 42.285;
   static double iconSize24 = screenHeight / 35.238;
 }

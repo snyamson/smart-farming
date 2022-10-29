@@ -24,7 +24,7 @@ class MainPage extends GetView<MainController> {
             currentIndex: controller.currentIndex.value,
             onTap: controller.currentIndex,
             type: BottomNavigationBarType.fixed,
-            //elevation: 10,
+            elevation: 0,
             selectedItemColor: AppColors.primaryColor,
             unselectedItemColor: const Color(0xFF838181),
             unselectedLabelStyle: AppTypography.textMedium10.copyWith(

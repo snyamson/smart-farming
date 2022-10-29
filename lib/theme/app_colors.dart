@@ -10,4 +10,5 @@ class AppColors {
   static Color iconBorderColor = const Color(0xFFEDCB15);
   static Color onboardingTitleTextColor = const Color(0xFF2F2E41);
   static Color onboardingDescTextColor = const Color(0xFF78787C);
+  static Color dividerColor = const Color(0xFFD1D1D1);
 }
