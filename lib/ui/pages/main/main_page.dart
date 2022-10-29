@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:get/get.dart';
@@ -15,17 +16,23 @@ class MainPage extends GetView<MainController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(
-        () => IndexedStack(
-          index: controller.currentIndex.value,
-          children: const [
-            LoadingPage(),
-            DoneLoadingPage(),
-            HomePage(),
-            AccountPage()
-          ],
-        ),
-      ),
+      body: Obx(() => PageTransitionSwitcher(
+            transitionBuilder: (child, animation, secondaryAnimation) =>
+                FadeThroughTransition(
+              animation: animation,
+              secondaryAnimation: secondaryAnimation,
+              child: child,
+            ),
+            child: IndexedStack(
+              index: controller.currentIndex.value,
+              children: const [
+                LoadingPage(),
+                DoneLoadingPage(),
+                HomePage(),
+                AccountPage()
+              ],
+            ),
+          )),
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(
             currentIndex: controller.currentIndex.value,
