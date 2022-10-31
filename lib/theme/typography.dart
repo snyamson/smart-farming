@@ -10,6 +10,12 @@ class AppTypography {
     color: Colors.white,
   );
 
+  static TextStyle registerText = GoogleFonts.poppins(
+    fontSize: Dimensions.font40,
+    fontWeight: FontWeight.bold,
+    color: AppColors.primaryColor,
+  );
+
   static TextStyle textBold26 = GoogleFonts.poppins(
     fontSize: Dimensions.font26,
     fontWeight: FontWeight.bold,

@@ -22,6 +22,7 @@ class Dimensions {
   static double height6 = screenHeight / 140.951;
   static double height10 = screenHeight / 84.571;
   static double height15 = screenHeight / 56.380;
+  static double height20 = screenHeight / 42.285;
   static double height40 = screenHeight / 21.143;
   static double height50 = screenHeight / 16.941;
   static double height95 = screenHeight / 8.902;
@@ -31,6 +32,7 @@ class Dimensions {
   static double width10 = screenHeight / 84.571;
   static double width12 = screenHeight / 70.476;
   static double width15 = screenHeight / 56.380;
+  static double width20 = screenHeight / 42.285;
   static double width95 = screenHeight / 8.902;
   static double width100 = screenHeight / 8.451;
 
@@ -43,6 +45,7 @@ class Dimensions {
   static double font20 = screenHeight / 42.286;
   static double font24 = screenHeight / 35.238;
   static double font26 = screenHeight / 32.527;
+  static double font40 = screenHeight / 21.142;
   static double font51 = screenHeight / 16.583;
 
   // Dynamic Sizes for BorderRadius
