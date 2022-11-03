@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:smart_farming/core/bindings/auth_binding.dart';
 import 'package:smart_farming/core/bindings/main_binding.dart';
 import 'package:smart_farming/core/bindings/onboarding_binding.dart';
 import 'package:smart_farming/core/bindings/splash_binding.dart';
@@ -38,7 +39,11 @@ class AppRouter {
       page: () => const OnboardingPage(),
       binding: OnboardingBinding(),
     ),
-    GetPage(name: register, page: () => const RegisterPage()),
+    GetPage(
+      name: register,
+      page: () => const RegisterPage(),
+      binding: AuthBinding(),
+    ),
     GetPage(
         name: phone,
         page: () => const EnterPhoneNumberPage(),

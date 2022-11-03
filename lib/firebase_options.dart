@@ -70,6 +70,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1038455885933',
     projectId: 'smart-farming-66ff7',
     storageBucket: 'smart-farming-66ff7.appspot.com',
+    androidClientId: '1038455885933-5mo35pl53jf8lrlte09iv7q4u9nknjjn.apps.googleusercontent.com',
     iosClientId: '1038455885933-4suhbjfe3kl3e9tqfo4n8gjk09tloae7.apps.googleusercontent.com',
     iosBundleId: 'com.example.smartFarming',
   );

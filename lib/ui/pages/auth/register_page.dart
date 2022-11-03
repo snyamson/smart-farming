@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:smart_farming/core/controllers/auth_controller.dart';
 import 'package:smart_farming/routes/app_router.dart';
 import 'package:smart_farming/theme/typography.dart';
 import 'package:smart_farming/ui/shared/widgets/button/social_button.dart';
 import 'package:smart_farming/utils/constants/dimensions.dart';
 
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends GetView<AuthController> {
   const RegisterPage({Key? key}) : super(key: key);
 
   @override
@@ -39,12 +40,14 @@ class RegisterPage extends StatelessWidget {
             Row(
               children: [
                 SocialButton(
-                  label: 'Log in with',
-                  onPressed: () {},
+                  label: 'Log in with Google',
+                  onPressed: () async {
+                    controller.signInWithGoogle();
+                  },
                 ),
                 SizedBox(width: Dimensions.width20),
                 SocialButton(
-                  label: 'Log in with',
+                  label: 'Log in with Facebook',
                   isFacebook: true,
                   onPressed: () {},
                 )
