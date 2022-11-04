@@ -28,6 +28,7 @@ class RegisterPage extends GetView<AuthController> {
                 'assets/icons/logo.png',
                 height: 300,
                 width: 300,
+                fit: BoxFit.cover,
               ),
             ),
             SizedBox(height: Dimensions.height50),

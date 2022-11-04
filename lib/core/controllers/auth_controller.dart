@@ -79,5 +79,6 @@ class AuthController extends GetxController {
 
   void signOut() async {
     await auth.signOut();
+    await googleSignIn.signOut();
   }
 }
