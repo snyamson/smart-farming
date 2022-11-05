@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Smart Farming',
-      initialRoute: AppRouter.register,
+      initialRoute: AppRouter.newUserDetail,
       getPages: AppRouter.routes,
     );
   }

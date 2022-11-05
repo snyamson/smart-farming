@@ -24,7 +24,7 @@ class EnterOtpPage extends StatelessWidget {
                   top: Dimensions.height100 - Dimensions.height20,
                 ),
                 child: Text(
-                  'Enter The 4 digit code that was\nsend to your Mobile Number',
+                  'Enter The 6 digit code that was\nsend to your Mobile Number',
                   style: AppTypography.textRegular14.copyWith(height: 2.5),
                   textAlign: TextAlign.center,
                 ),
@@ -61,7 +61,29 @@ class EnterOtpPage extends StatelessWidget {
                 },
               ),
               SizedBox(height: Dimensions.height20 + Dimensions.height10),
-              FullWidthButton(label: 'VERIFY', onPressed: () {})
+              FullWidthButton(label: 'VERIFY', onPressed: () {}),
+              Container(
+                padding: EdgeInsets.only(top: Dimensions.height10),
+                margin: EdgeInsets.only(
+                  right: Dimensions.width10,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        print('resend code');
+                      },
+                      child: Text(
+                        'Resend Again?',
+                        style: AppTypography.textRegular12.copyWith(
+                          color: const Color(0xFF7089F0),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),

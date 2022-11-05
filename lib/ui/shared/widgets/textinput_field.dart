@@ -5,21 +5,33 @@ import 'package:smart_farming/utils/constants/dimensions.dart';
 
 class TextInputField extends StatelessWidget {
   final int? textSize;
-  const TextInputField({Key? key, this.textSize}) : super(key: key);
+  final Color? borderColor;
+  final int? maxLines;
+  final TextInputType? keyboardType;
+  final String? placeholder;
+  const TextInputField(
+      {Key? key,
+      this.textSize,
+      this.borderColor,
+      this.maxLines,
+      this.keyboardType,
+      this.placeholder})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      keyboardType: TextInputType.phone,
+      keyboardType: keyboardType ?? TextInputType.phone,
+      maxLines: maxLines,
       cursorColor: const Color(0xFF707070),
       cursorHeight: textSize?.toDouble() ?? 13,
       style: determineTextSize(textSize),
       decoration: InputDecoration(
-        hintText: 'Enter Your Mobile Number',
+        hintText: placeholder ?? 'Enter Your Mobile Number',
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Dimensions.radius10),
-          borderSide: const BorderSide(
-            color: Color(0xFF707070),
+          borderSide: BorderSide(
+            color: borderColor ?? const Color(0xFF707070),
           ),
         ),
         errorBorder: OutlineInputBorder(
@@ -30,8 +42,14 @@ class TextInputField extends StatelessWidget {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(Dimensions.radius10),
-          borderSide: const BorderSide(
-            color: Color(0xFF707070),
+          borderSide: BorderSide(
+            color: borderColor ?? const Color(0xFF707070),
+          ),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(Dimensions.radius10),
+          borderSide: BorderSide(
+            color: borderColor ?? const Color(0xFF707070),
           ),
         ),
       ),

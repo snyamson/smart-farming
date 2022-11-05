@@ -5,6 +5,7 @@ import 'package:smart_farming/core/bindings/onboarding_binding.dart';
 import 'package:smart_farming/core/bindings/splash_binding.dart';
 import 'package:smart_farming/ui/pages/auth/enter_otp_page.dart';
 import 'package:smart_farming/ui/pages/auth/enter_phone_number_page.dart';
+import 'package:smart_farming/ui/pages/auth/new_user_detail.dart';
 import 'package:smart_farming/ui/pages/auth/register_page.dart';
 import 'package:smart_farming/ui/pages/home/home_page.dart';
 import 'package:smart_farming/ui/pages/main/main_page.dart';
@@ -17,6 +18,7 @@ class AppRouter {
   static String register = '/register';
   static String phone = '/phone';
   static String enterOtp = '/enterOtp';
+  static String newUserDetail = '/newUserDetail';
   static String main = '/main';
   static String home = '/home';
 
@@ -25,6 +27,7 @@ class AppRouter {
   static String get getRegisterRoute => register;
   static String get getEnterPhoneRoute => phone;
   static String get getEnterOtpRoute => enterOtp;
+  static String get getNewUserDetailRoute => newUserDetail;
   static String get getMainRoute => main;
   static String get getHomeRoute => home;
 
@@ -45,10 +48,16 @@ class AppRouter {
       binding: AuthBinding(),
     ),
     GetPage(
-        name: phone,
-        page: () => const EnterPhoneNumberPage(),
-        transition: Transition.cupertino),
+      name: phone,
+      page: () => const EnterPhoneNumberPage(),
+      transition: Transition.cupertino,
+    ),
     GetPage(name: enterOtp, page: () => const EnterOtpPage()),
+    GetPage(
+      name: newUserDetail,
+      page: () => const NewUserDetail(),
+      transition: Transition.cupertino,
+    ),
     GetPage(
       name: main,
       page: () => const MainPage(),
