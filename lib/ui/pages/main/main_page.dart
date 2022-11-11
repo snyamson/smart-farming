@@ -26,9 +26,9 @@ class MainPage extends GetView<MainController> {
             child: IndexedStack(
               index: controller.currentIndex.value,
               children: const [
-                RegisterPage(),
-                DoneLoadingPage(),
                 HomePage(),
+                DoneLoadingPage(),
+                RegisterPage(),
                 AccountPage()
               ],
             ),

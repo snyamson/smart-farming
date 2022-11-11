@@ -8,7 +8,7 @@ class Dimensions {
   //Containers
   static double productTileContainerHeight = screenHeight / 5.914;
   static double productTileContainerWidth = screenHeight / 7.167;
-  static double productImageContainerHeight = screenHeight / 4.805;
+  static double productImageContainerHeight = screenHeight / 4;
   static double productImageContainerWidth = screenHeight / 2.525;
   static double accountPageHeaderHeight = screenHeight / 3.382;
 
