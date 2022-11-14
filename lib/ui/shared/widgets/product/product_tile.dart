@@ -1,12 +1,14 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:smart_farming/core/models/product.dart';
 import 'package:smart_farming/theme/app_colors.dart';
 import 'package:smart_farming/theme/typography.dart';
 import 'package:smart_farming/ui/pages/product_detail/product_detail_page.dart';
 import 'package:smart_farming/utils/constants/dimensions.dart';
 
 class ProductTile extends StatelessWidget {
-  const ProductTile({Key? key}) : super(key: key);
+  final Product product;
+  const ProductTile({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +34,20 @@ class ProductTile extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius:
                             BorderRadius.circular(Dimensions.radius10),
-                        image: const DecorationImage(
-                          image: AssetImage('assets/images/fresh_corn.jpg'),
+                        image: DecorationImage(
+                          image: AssetImage(product.image),
                           fit: BoxFit.cover,
                         ),
                       ),
                     ),
-                openBuilder: (context, action) => const ProductDetailPage()),
+                openBuilder: (context, action) => ProductDetailPage(product)),
             Positioned(
               top: (Dimensions.height10 - 1) / 3,
               right: Dimensions.height10,
               child: GestureDetector(
+                onTap: () {
+                  print('fav tapped');
+                },
                 child: Container(
                   height: 25,
                   width: 25,
@@ -73,9 +78,10 @@ class ProductTile extends StatelessWidget {
           ),
         ),
         SizedBox(height: Dimensions.height10 / 2),
-        Text('Soya Beans', style: AppTypography.textMedium14),
+        Text(product.name, style: AppTypography.textMedium14),
         SizedBox(height: Dimensions.height10 / 2),
-        Text('Ghs 200 Per/ kg', style: AppTypography.textSemiBold12),
+        Text('Ghs${product.price}  Per/ ${product.unit}',
+            style: AppTypography.textSemiBold12),
       ],
     );
   }

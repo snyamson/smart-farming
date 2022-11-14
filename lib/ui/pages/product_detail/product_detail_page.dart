@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:get/get.dart';
-import 'package:parse_server_sdk_flutter/parse_server_sdk.dart';
+import 'package:smart_farming/core/controllers/product_controller.dart';
+import 'package:smart_farming/core/models/product.dart';
 import 'package:smart_farming/theme/app_colors.dart';
 import 'package:smart_farming/theme/typography.dart';
 import 'package:smart_farming/ui/shared/widgets/button/small_button.dart';
 import 'package:smart_farming/utils/constants/dimensions.dart';
 
-class ProductDetailPage extends GetView {
-  const ProductDetailPage({Key? key}) : super(key: key);
-
-  Future<List<ParseObject>> getProducts() async {
-    QueryBuilder<ParseObject> queryProduct =
-        QueryBuilder<ParseObject>(ParseObject('Product'));
-    final ParseResponse apiResponse = await queryProduct.query();
-    print(apiResponse.results);
-    if (apiResponse.success && apiResponse.results != null) {
-      return apiResponse.results as List<ParseObject>;
-    } else {
-      return [];
-    }
-  }
+class ProductDetailPage extends GetView<ProductController> {
+  final Product product;
+  const ProductDetailPage(this.product, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -51,9 +41,9 @@ class ProductDetailPage extends GetView {
               height: Dimensions.productImageContainerHeight,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Dimensions.radius10),
-                image: const DecorationImage(
+                image: DecorationImage(
                   image: AssetImage(
-                    'assets/images/fresh_corn.jpg',
+                    product.image,
                   ),
                   fit: BoxFit.cover,
                 ),
@@ -61,7 +51,7 @@ class ProductDetailPage extends GetView {
             ),
             const SizedBox(height: 20),
             Text(
-              'Soya Beans',
+              product.name,
               style: AppTypography.textSemiBold20
                   .copyWith(fontSize: 18, fontWeight: FontWeight.w500),
             ),
@@ -130,7 +120,8 @@ class ProductDetailPage extends GetView {
                 SmallButton(
                     label: 'Buy Now',
                     onPressed: () {
-                      getProducts();
+                      print('buy Now');
+                      controller.addToCart(product);
                     }),
               ],
             ),

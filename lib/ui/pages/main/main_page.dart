@@ -1,14 +1,16 @@
 import 'package:animations/animations.dart';
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:get/get.dart';
+import 'package:smart_farming/core/controllers/cart_controller.dart';
 import 'package:smart_farming/core/controllers/main_controller.dart';
 import 'package:smart_farming/theme/app_colors.dart';
 import 'package:smart_farming/theme/typography.dart';
 import 'package:smart_farming/ui/pages/account/account_page.dart';
 import 'package:smart_farming/ui/pages/auth/register_page.dart';
 import 'package:smart_farming/ui/pages/home/home_page.dart';
-import 'package:smart_farming/ui/shared/pages/loading/done_loading_page.dart';
+import 'package:smart_farming/ui/pages/shoppingCart/shopping_cart_page.dart';
 
 class MainPage extends GetView<MainController> {
   const MainPage({Key? key}) : super(key: key);
@@ -27,7 +29,7 @@ class MainPage extends GetView<MainController> {
               index: controller.currentIndex.value,
               children: const [
                 HomePage(),
-                DoneLoadingPage(),
+                ShoppingCartPage(),
                 RegisterPage(),
                 AccountPage()
               ],
@@ -49,20 +51,31 @@ class MainPage extends GetView<MainController> {
             showUnselectedLabels: true,
             selectedFontSize: 10,
             unselectedFontSize: 10,
-            items: const [
-              BottomNavigationBarItem(
+            items: [
+              const BottomNavigationBarItem(
                 icon: Icon(FeatherIcons.home),
                 label: 'HOME',
               ),
               BottomNavigationBarItem(
-                icon: Icon(FeatherIcons.shoppingCart),
+                icon: Badge(
+                  shape: BadgeShape.circle,
+                  position: BadgePosition.topEnd(),
+                  badgeColor: AppColors.primaryColor,
+                  borderRadius: BorderRadius.circular(100),
+                  badgeContent: Text(
+                    Get.find<CartController>().cartItems.length.toString(),
+                    style: AppTypography.textMedium14
+                        .copyWith(color: Colors.white),
+                  ),
+                  child: const Icon(FeatherIcons.shoppingCart),
+                ),
                 label: 'Shopping cart',
               ),
-              BottomNavigationBarItem(
+              const BottomNavigationBarItem(
                 icon: Icon(FeatherIcons.heart),
                 label: 'Favorite',
               ),
-              BottomNavigationBarItem(
+              const BottomNavigationBarItem(
                 icon: Icon(FeatherIcons.user),
                 label: 'My Account',
               ),
